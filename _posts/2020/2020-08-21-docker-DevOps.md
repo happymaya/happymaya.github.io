@@ -9,7 +9,7 @@ tags: [Docker,DevOps]
 math: true
 mermaid: true
 image:
-  src: /assets/post-img/docker/docker.jpeg
+  src: https://images.happymaya.cn/assert/docker/docker.jpeg
   width: 800
   height: 500
 ---
@@ -30,7 +30,7 @@ DevOps 作为一个热门的概念，近几年被提及的频率也越来越高�
 
 如图下图所示：
 
-![早期的计算软件交付流程](/assets/post-img/docker/docker-devops-1.png)
+![早期的计算软件交付流程](https://images.happymaya.cn/assert/docker/docker-devops-1.png)
 
 随着计算机的发展和普及，越来越多的人接触到了计算机，这时的计算机也开始逐渐应用于商业领域，市场上出现了越来越多的办公、游戏等“软件”，也有越来越多的人开始从事软件开发这个行业，而这些软件开发者也有了更加专业的称呼“软件开发工程师”。
 
@@ -41,7 +41,7 @@ DevOps 作为一个热门的概念，近几年被提及的频率也越来越高�
 - 测试工程师做专业的测试工作
 - 运维工程师负责将软件部署并负责维护软件
 如图下图所示：
-![image.png](/assets/post-img/docker/docker-devops-2.png)
+![image.png](https://images.happymaya.cn/assert/docker/docker-devops-2.png)
 
 这种软件开发模式被称为瀑布模型，这种模式将软件生命周期划分为：
 - 制定计划
@@ -52,7 +52,7 @@ DevOps 作为一个热门的概念，近几年被提及的频率也越来越高�
 - 运行维护等六个基本活动
 
 并且规定了它们自上而下、相互衔接的固定次序，如瀑布流水一样，逐级的下降。
-![image.png](/assets//post-img/docker/docker-devops-3.png)
+![image.png](https://images.happymaya.cn/assert/docker/docker-devops-3.png)
 
 
 瀑布模型的模式十分理想化，它假定用户需求十分明确，开发时间十分充足，且项目是单向迭代的。
@@ -98,7 +98,7 @@ DevOps 的整体目标是**促进开发和运维人员之间的配合，并且�
 
 这时的研发和运维都开始关注软件统一交付的格式和软件生命周期的管理，**而不像之前一样研发只关注“打包前”，而运维只关注“打包后”的模式**，DevOps 无论是研发环境还是生产环境都开始围绕 Docker 进行构建。
 
-![image.png](/assets/post-img/docker/docker-devops-4.png)
+![image.png](https://images.happymaya.cn/assert/docker/docker-devops-4.png)
 
  综上所述，微服务、Docker 与 DevOps 三者之间的关系，如上图所示。
 

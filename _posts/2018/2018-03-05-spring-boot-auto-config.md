@@ -1,4 +1,12 @@
-# Spring Boot 自动配置实现原理
+---
+title: Spring Boot 自动配置实现原理
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-03-05 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, Spring Security]
+---
 
 Spring Boot 中的配置体系是一套强大而复杂的体系，其中最基础、最核心的要数自动配置（AutoConfiguration）机制了.
 

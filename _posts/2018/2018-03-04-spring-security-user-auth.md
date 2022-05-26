@@ -1,10 +1,10 @@
 ---
 title: 基于 Spring Security 构建用户认证体系
 author:
-  name: Dinesh Prasanth Moluguwan Krishnamoorthy
+  name: superhsc
   link: https://github.com/happymaya
-date: 2018-03-03 17:32:00 -0500
-categories:  [Blog, Tutorial]
+date: 2018-03-04 17:32:00 +0800
+categories: [Spring]
 tags: [SpringBoot, Spring Security]
 ---
 

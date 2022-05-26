@@ -9,7 +9,7 @@ tags: [Docker,Kubernetes]
 math: true
 mermaid: true
 image:
-  src: /assets/post-img/docker/docker.jpeg
+  src: https://images.happymaya.cn/assert/docker/docker.jpeg
   width: 800
   height: 500
 ---
@@ -51,7 +51,7 @@ Kubernetes 采用典型的主从架构，分为 Master 和 Node 两个角色。
 
 整体架构如下图：
 
-![](/assets//post-img/docker/docker-kubernetes-1.svg)
+![](https://images.happymaya.cn/assert/docker/docker-kubernetes-1.svg)
 更多 Kubernetes 的了解去官方阅读 [Kubernetes 的文档](https://kubernetes.io/)
 
 ## Master 节点
@@ -161,7 +161,7 @@ $ minikube start
 执行完上述命令后，minikube 会自动帮助创建并启动一个 Kubernetes 集群。
 
 命令输出如下，当命令行输出 Done 时，代表集群已经部署完成。
-![Kubernetes Success tips](/assets/post-img/docker/docker-kubernetes-2.png)
+![Kubernetes Success tips](https://images.happymaya.cn/assert/docker/docker-kubernetes-2.png)
 
 第三步，检查集群状态。集群安装成功后，使用以下命令检查 Kubernetes 集群是否成功启动。
 ```bash
@@ -257,7 +257,7 @@ kubernetes    ClusterIP   10.96.0.1      <none>        443/TCP    �
 $ minikube service hello-world
 ```
 输出如下：
-![image.png](/assets/post-img/docker/docker-kubernetes-3.png)
+![image.png](https://images.happymaya.cn/assert/docker/docker-kubernetes-3.png)
 
 可以看到 minikube 将服务暴露在了 32391 端口上，通过 http://{U-IP}:32391 可以访问到已启动的服务，如下图所示。
-![image.png](/assets/post-img/docker/docker-kubernetes-4.png)
+![image.png](https://images.happymaya.cn/assert/docker/docker-kubernetes-4.png)

@@ -1,4 +1,12 @@
-# 实现自定义度量指标和 Actuator 端点
+---
+title: 实现自定义度量指标和 Actuator 端点
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-05-15 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, Spring Boot Actuator]
+---
 
 引入了 Spring Boot Actuator 组件来满足 Spring Boot 应用程序的系统监控功能，并重点介绍了如何扩展常见的 Info 和 Health 监控端点的实现方法。
 

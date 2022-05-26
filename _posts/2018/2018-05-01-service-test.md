@@ -1,4 +1,12 @@
-# 使用 Spring 测试 Web 服务层组件
+---
+title: 使用 Spring 测试 Web 服务层组件
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-05-01 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, Test]
+---
 
 与位于底层的数据库访问层（Dao）不同，业务服务层（Service）和控制层（Controller）都依赖它的下一层组件，即:
 - 业务服务层（Service）依赖于数据访问层（Dao）;
@@ -18,6 +26,7 @@
 第一种测试方案比较简单，在 `src/test/resources` 目录下添加配置文件时，Spring Boot 能读取这些配置文件中的配置项并应用于测试案例中。
 
 Environment 接口，定义如下：
+
 ```java
 public interface Environment extends PropertyResolver {
     String[] getActiveProfiles();
@@ -27,6 +36,7 @@ public interface Environment extends PropertyResolver {
 ```
 
 在上述代码中可以看到，`Environment` 接口的主要作用是处理 `Profile`，而它的父接口 `PropertyResolver` 定义如下代码所示：
+
 ```java
 public interface PropertyResolver {
     boolean containsProperty(String key);

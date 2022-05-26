@@ -9,7 +9,7 @@ tags: [Docker]
 math: true
 mermaid: true
 image:
-  src: /assets/post-img/docker/docker.jpeg
+  src: https://images.happymaya.cn/assert/docker/docker.jpeg
   width: 800
   height: 500
 ---
@@ -51,7 +51,7 @@ Docker 的操作围绕镜像、容器、仓库三大核心概念。
 ## 镜像、容器、仓库三者之间的联系
 
 
-![镜像、容器以及仓库关系图.png](/assets/post-img/docker/image_container_repo_.png)
+![镜像、容器以及仓库关系图.png](https://images.happymaya.cn/assert/docker/image_container_repo_.png)
 
 从上图 1 来看：
 
@@ -80,7 +80,7 @@ Docker 的操作围绕镜像、容器、仓库三大核心概念。
 
 
 正是由于容器的战争，才导致 Docker 不得不在战争中改变一些技术架构。最终形成了下图所示的技术架构。
-![Docker 架构图 (2).png](/assets/post-img/docker/dcoker_architecture.png)
+![Docker 架构图 (2).png](https://images.happymaya.cn/assert/docker/dcoker_architecture.png)
 
 从上图可以看到，Docker 整体架构采用 C/S（客户端 / 服务器）模式，主要由客户端和服务端两大部分组成。
 
@@ -145,7 +145,7 @@ Docker 的操作围绕镜像、容器、仓库三大核心概念。
    - 通过 containerd-shim 启动并管理 runC
    - 真正的管理容器的生命周期
 
-![Docker 生命周期](/assets/post-img/docker/docker_life.png)
+![Docker 生命周期](https://images.happymaya.cn/assert/docker/docker_life.png)
 
 通过上图，可以看到：
 

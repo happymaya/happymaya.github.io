@@ -1,3 +1,12 @@
+---
+title: JDBC 关系型数据库访问规范
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-05-20 17:32:00 +0800
+categories: [Blog, Notes]
+tags: [JDBC]
+---
 # JDBC 关系型数据库访问规范
 
 

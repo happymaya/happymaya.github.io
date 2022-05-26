@@ -1,4 +1,12 @@
-# RestTemplate 远程调用实现原理
+---
+title: RestTemplate 远程调用实现原理
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-05-07 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, RestTemplate]
+---
 
 RestTemplate 访问 HTTP 端点的使用方法，它涉及 RestTemplate 初始化、发起请求及获取响应结果等核心环节。
 

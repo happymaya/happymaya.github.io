@@ -1,5 +1,12 @@
-# 使用 JdbcTemplate 访问关系型数据库
-
+---
+title: 使用 JdbcTemplate 访问关系型数据库
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-04-20 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, JdbcTemplate]
+---
 
 JDBC 规范是 Java 领域中使用最广泛的数据访问标准，目前市面上主流的数据访问框架都是构建在 JDBC 规范之上。
 

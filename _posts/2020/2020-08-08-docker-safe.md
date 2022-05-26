@@ -9,7 +9,7 @@ tags: [Docker]
 math: true
 mermaid: true
 image:
-  src: /assets/post-img/docker/docker.jpeg
+  src: https://images.happymaya.cn/assert/docker/docker.jpeg
   width: 800
   height: 500
 ---
@@ -17,7 +17,7 @@ image:
 Docker 是基于 Linux 内核的 Namespace 技术实现资源隔离的，所有的容器都共享主机的内核。其实这与以虚拟机为代表的云计算时代还是有很多区别的，比如虚拟机有着更好的隔离性和安全性，而容器的隔离性和安全性则相对较弱。
 
 # Docker 与虚拟机区别
-![Docker 与虚拟机区别](/assets/post-img/docker/docker_v_1.png)
+![Docker 与虚拟机区别](https://images.happymaya.cn/assert/docker/docker_v_1.png)
 
 ## 虚拟机
 虚拟机是通过管理系统(Hypervisor)模拟出 CPU、内存、网络等硬件，然后在这些模拟的硬件上创建客户内核和操作系统。这样做的好处是：

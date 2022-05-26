@@ -1,10 +1,19 @@
+---
+title: 线程池常用的阻塞队列
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2019-11-04 23:33:00 +0800
+categories: [Java, Concurrent]
+tags: [thread]
+math: true
+mermaid: true
+---
 # 13-线程池常用的阻塞队列有哪些？
 
 ### 线程池内部结构
 
-![](D:\coding\image\assert\blog\java\java-thread-blocking-queue.png)
-
-
+![](https://images.happymaya.cn/assert/java/thread/java-thread-blocking-queue.png)
 
 线程池的内部结构主要由四部分组成，如图所示。
 
@@ -48,7 +57,8 @@
 
 
 
-我们自己创建使用 SynchronousQueue 的线程池时，如果不希望任务被拒绝，那么就需要注意设置最大线程数要尽可能大一些，以免发生任务数大于最大线程数时，没办法把任务放到队列中也没有足够线程来执行任务的情况。
+> 自己创建使用 SynchronousQueue 的线程池时，如果不希望任务被拒绝，那么就需要注意设置最大线程数要尽可能大一些，以免发生任务数大于最大线程数时，没办法把任务放到队列中也没有足够线程来执行任务的情况
+{: .prompt-tip }
 
 
 

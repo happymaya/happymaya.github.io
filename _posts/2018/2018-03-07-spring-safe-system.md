@@ -1,4 +1,12 @@
-# Spring 安全体系的整体架构
+---
+title: Spring 安全体系的整体架构
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-03-07 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, Spring Security]
+---
 
 在设计 Web 应用程序时：
 1. 一方面，因为缺乏对 Web 安全访问机制的认识，所以系统安全性是一个重要但又容易被忽略的话题；

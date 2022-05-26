@@ -9,7 +9,7 @@ tags: [Docker,Docker Swarm]
 math: true
 mermaid: true
 image:
-  src: /assets/post-img/docker/docker.jpeg
+  src: https://images.happymaya.cn/assert/docker/docker.jpeg
   width: 800
   height: 500
 ---
@@ -52,7 +52,7 @@ Swarm 的架构整体分为：
 - **工作节点**（Worker Nodes）
 
 整体架构如下图：
-![Swarm 的架构](/assets//post-img/docker/docker-swarm-1.png)
+![Swarm 的架构](https://images.happymaya.cn/assert/docker/docker-swarm-1.png)
 
 **管理节点：** 
 - 管理节点，负责接受用户请求，用户请求中包含，用户定义的容器运行状态描述

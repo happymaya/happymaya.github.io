@@ -1,7 +1,14 @@
-# 使用 RestTemplate 消费 RESTful 服务
+---
+title: 使用 RestTemplate 消费 RESTful 服务
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-05-03 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, RestTemplate, RESTful]
+---
 
 完成 Web 服务的构建后，接下来需要做的事情就是如何对服务进行消费。
-
 
 ## 使用 RestTemplate 访问 HTTP 端点
 

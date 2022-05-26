@@ -1,5 +1,12 @@
-# Spring Data 对数据访问过程的统一抽象
-
+---
+title: Spring Data 对数据访问过程的统一抽象
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-03-02 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, Spring Data]
+---
 
 事实上，JdbcTemplate 是相对偏底层的一个工具类，作为系统开发最重要的基础功能之一，数据访问层组件的开发方式在 Spring Boot 中也得到了进一步简化，并充分发挥了 Spring 家族中另一个重要成员 Spring Data 的作用。
 

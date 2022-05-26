@@ -5,7 +5,7 @@ author:
   link: https://github.com/happymaya
 date: 2019-11-02 23:33:00 +0800
 categories: [Java, Concurrent]
-tags:  [java, thread]
+tags: [thread]
 math: true
 mermaid: true
 ---

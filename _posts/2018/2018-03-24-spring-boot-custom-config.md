@@ -1,13 +1,12 @@
 ---
 title: Spring Boot 创建和管理自定义的配置信息
 author:
-  name: Dinesh Prasanth Moluguwan Krishnamoorthy
+  name: superhsc
   link: https://github.com/happymaya
-date: 2018-03-24 20:32:00 -0500
-categories:  [Blog, Tutorial]
+date: 2018-03-24 20:32:00 +0800
+categories: [Spring]
 tags: [SpringBoot]
 ---
-# 创建和管理自定义的配置信息
 
 ## 在应用程序中嵌入系统配置信息
 

@@ -5,17 +5,16 @@ author:
   link: https://github.com/happymaya
 date: 2019-11-02 23:33:00 +0800
 categories: [Java, Concurrent]
-tags:  [java, thread]
+tags: [java, thread]
 math: true
 mermaid: true
 ---
+
 启动一个线程非常简单，只需要两步：
 1. 在 run() 方法中定义需要执行的任务
 2. 调用 Thread 类的 start() 方法
 
 但是，正确停止线程就没那么容了。
-
-
 
 ## 原理
 
@@ -31,8 +30,6 @@ mermaid: true
 尤其是想写一个健壮性很好，能够安全应对各种场景的程序时，正确停止线程就显得格外重要。
 
 不过 Java 没有提供简单易用，能够直接安全停止线程的能力。
-
-
 
 ## Java 没有安全停止线程能力的原因
 

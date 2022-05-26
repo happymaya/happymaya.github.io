@@ -5,7 +5,7 @@ author:
   link: https://github.com/happymaya
 date: 2019-11-04 23:33:00 +0800
 categories: [Java, Concurrent]
-tags:  [java, thread]
+tags: [java, thread]
 math: true
 mermaid: true
 ---
@@ -26,7 +26,7 @@ mermaid: true
 
 New 表示线程被创建但尚未启动的状态
 
-![java thread status：new](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-new.png)
+![java thread status：new](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-new.png)
 
 当用 `new Thread()` 新建一个线程时，如果线程没有开始运行 `start()` 方法，所以也没有开始执行 `run()` 方法里面的代码，那么此时它的状态就是 New。
 
@@ -34,7 +34,7 @@ New 表示线程被创建但尚未启动的状态
 
 ## **Runnable 可运行**
 
-![java thread status：Runnable](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-Runnable.png)
+![java thread status：Runnable](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-Runnable.png)
 
 Java 中的 Runable 状态对应**操作系统线程状态**中的两种状态，分别是 **Running** 和 **Ready**，也就是说，Java 中处于 Runnable 状态的线程有可能正在执行，也有可能没有正在执行，正在等待被分配 CPU 资源。
 
@@ -42,7 +42,7 @@ Java 中的 Runable 状态对应**操作系统线程状态**中的两种状态�
 
 ## **阻塞状态**
 
-![java thread status：Block](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-block.png)
+![java thread status：Block](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-block.png)
 
  Runnable 下面的三个方框，它们统称为阻塞状态，在 Java 中阻塞状态通常不仅仅是 Blocked，实际上它包括三种状态，分别是 **Blocked(被阻塞）**、**Waiting(等待）**、**Timed Waiting(计时等待）**，这三种状态统称为**阻塞状态**。这三种状态具体是什么含义。 
 
@@ -50,13 +50,13 @@ Java 中的 Runable 状态对应**操作系统线程状态**中的两种状态�
 
 最简单的是 Blocked，从箭头的流转方向，可以看出，从 Runnable 状态进入 Blocked 状态只有一种可能：就是进入 synchronized 保护的代码，但没有抢到 monitor 锁，无论是进入 synchronized 代码块，还是 synchronized 方法，都是一样的。
 
-![java thread status：Blocked](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-block-blocked.png)
+![java thread status：Blocked](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-block-blocked.png)
 
 再往右看，当处于 Blocked 的线程抢到 monitor 锁，就会从 Blocked 状态回到Runnable 状态。
 
 ### **Waiting 等待**
 
-![java thread status：Waiting](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-block-waiting.png)
+![java thread status：Waiting](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-block-waiting.png)
 
 线程进入 Waiting 状态有三种可能性。
 
@@ -70,7 +70,7 @@ Blocked 与 Waiting 的区别是: Blocked 在等待其他线程释放 monitor �
 
 ### **Timed Waiting 限期等待**
 
-![java thread status: Timed Waiting](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-block-time-waiting.png)
+![java thread status: Timed Waiting](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-block-time-waiting.png)
 
 在 Waiting 上面是 Timed Waiting 状态，这两个状态是非常相似的，区别仅在于**有没有时间限制**，Timed Waiting 会等待超时，由系统自动唤醒，或者在超时前被唤醒信号唤醒。
 
@@ -86,7 +86,7 @@ Blocked 与 Waiting 的区别是: Blocked 在等待其他线程释放 monitor �
 
 ####  Blocked -> Next Status
 
-![](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-block-blocked-in.png)
+![](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-block-blocked-in.png)
 
 从 Blocked 状态进入 Runnable 状态，要求线程获取 monitor 锁；
 
@@ -94,21 +94,21 @@ Blocked 与 Waiting 的区别是: Blocked 在等待其他线程释放 monitor �
 #### Waiting -> Next Status
 从 Waiting 状态流转到其他状态则比较特殊，由于 Waiting 是不限时的，也就是无论过了多长时间它都不会主动恢复，只有当执行了 LockSupport.unpark() 或者 join 的线程运行结束，或者被中断时才可以进入 Runnable 状态。
 
-![Waiting to Runnable](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-block-waiting-in-1.png)
+![Waiting to Runnable](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-block-waiting-in-1.png)
 
 
 
-![Waiting to Blocked to Runnable](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-block-waiting-in-2.png)
+![Waiting to Blocked to Runnable](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-block-waiting-in-2.png)
 
 如果其他线程调用 notify() 或 notifyAll() 来唤醒它，它会直接进入 Blocked 状态，这是因为唤醒 Waiting 线程的线程如果调用 notify() 或 notifyAll()，要求必须首先持有该 monitor 锁，所以处于 Waiting 状态的线程被唤醒时拿不到该锁，就会进入 Blocked 状态，直到执行了 notify()/notifyAll() 的唤醒它的线程执行完毕并释放 monitor 锁，才可能轮到它去抢夺这把锁，如果它能抢到，就会从 Blocked 状态回到 Runnable 状态。
 
-![Time Waiting to Blocked to Runnable](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-block-time-waiting-in-1.png)
+![Time Waiting to Blocked to Runnable](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-block-time-waiting-in-1.png)
 
 
 
 同样在 Timed Waiting 中执行 notify() 和 notifyAll() 也是一样的道理，它们会先进入 Blocked 状态，然后抢夺锁成功后，再回到 Runnable 状态。
 
-![Time Waiting to Blocked to Runnable](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-block-time-waiting-in-2.png)
+![Time Waiting to Blocked to Runnable](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-block-time-waiting-in-2.png)
 
 当然对于 Timed Waiting 而言，如果它的超时时间到了且能直接获取到锁/join的线程运行结束/被中断/调用了LockSupport.unpark()，会直接恢复到 Runnable 状态，而无需经历 Blocked 状态。
 
@@ -116,7 +116,7 @@ Blocked 与 Waiting 的区别是: Blocked 在等待其他线程释放 monitor �
 
 ## **Terminated 终止**
 
-![java thread status: Terminated](https://image.happymaya.cn/assert/blog/java/java-thread-life-status-terminated.png)
+![java thread status: Terminated](https://images.happymaya.cn/assert/java/thread/java-thread-life-status-terminated.png)
 
 再来看看最后一种状态，Terminated 终止状态，要想进入这个状态有两种可能。
 

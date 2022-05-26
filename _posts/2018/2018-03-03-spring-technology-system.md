@@ -1,10 +1,10 @@
 ---
 title: Spring 技术体系
 author:
-  name: Dinesh Prasanth Moluguwan Krishnamoorthy
+  name: superhsc
   link: https://github.com/happymaya
-date: 2018-03-03 17:32:00 -0500
-categories:  [Blog, Tutorial]
+date: 2018-03-02 17:32:00 +0800
+categories: [Spring]
 tags: [Spring]
 ---
 
@@ -12,7 +12,7 @@ Spring 框架自 2003 年由 Rod Johnson 设计并实现以来，经历了多个
 
 目前，Spring 已经是 Java EE 领域最流行的开发框架，在全球各大企业中都得到了广泛应用。
 
-# Spring 家族技术生态全景图
+## Spring 家族技术生态全景图
 
 ![](https://images.happymaya.cn/assert/spring-boot/what_spring_can_do.png)
 

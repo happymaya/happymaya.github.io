@@ -1,4 +1,12 @@
-# 使用 JmsTemplate 集成 ActiveMQ
+---
+title: 使用 JmsTemplate 集成 ActiveMQ
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-05-24 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, JmsTemplate, ActiveMQ]
+---
 
 基于 JmsTemplate 模板工具类为 spring-css 添加对应的消息通信机制。
 

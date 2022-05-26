@@ -6,7 +6,6 @@ author:
 date: 2018-08-09 20:55:00 +0800
 categories:  [Blog, Notes]
 tags: [getting started]
-# pin: true 
 ---
 
 ## Prerequisites

@@ -9,7 +9,7 @@ tags: [Docker]
 math: true
 mermaid: true
 image:
-  src: /assets/post-img/docker/docker.jpeg
+  src: https://images.happymaya.cn/assert/docker/docker.jpeg
   width: 800
   height: 500
 ---
@@ -81,13 +81,13 @@ $ docker run \
 ## 使用 CAdvisor 查看主机监控
 
 访问 [http://localhost:8080/containers/](http://localhost:8080/containers/) 地址，在首页可以看到主机的资源使用情况，包含 CPU、内存、文件系统、网络等资源，如下图所示：
-![image.png](/assets/post-img/docker/dcoker_avactor_1.png)
+![image.png](https://images.happymaya.cn/assert/docker/dcoker_avactor_1.png)
 
 ## 使用 CAdvisor 查看容器监控
 查看主机上运行的容器资源使用情况，可以访问 [http://localhost:8080/docker/](http://localhost:8080/docker/)，这个页面会列出 Docker 的基本信息和运行的容器情况，如下图所示：
 
 在上图中的 Subcontainers 下会列出当前主机上运行的所有容器，点击其中一个容器即可查看该容器的详细运行状态，如下图所示：
-![image.png](/assets/post-img/docker/dcoker_avactor_2.png)
+![image.png](https://images.happymaya.cn/assert/docker/dcoker_avactor_2.png)
 
 总体来说，使用 cAdvisor 监控容器具有以下特点：
 

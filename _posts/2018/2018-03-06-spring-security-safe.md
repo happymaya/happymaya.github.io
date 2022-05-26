@@ -1,4 +1,12 @@
-# 基于 Spring Security 确保请求安全访问
+---
+title: 基于 Spring Security 确保请求安全访问
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-03-06 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, Spring Security]
+---
 
 在日常开发过程中，需要对 Web 应用中的不同 HTTP 端点进行不同粒度的权限控制，并且希望这种控制方法足够灵活。而借助 Spring Security 框架，就可以对其进行简单实现。
 

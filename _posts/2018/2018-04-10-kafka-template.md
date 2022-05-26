@@ -1,5 +1,12 @@
-## 使用 KafkaTemplate 集成 Kafka
-
+---
+title: 使用 KafkaTemplate 集成 Kafka
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-04-10 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, KafkaTemplate, Kafka]
+---
 
 消息通信是 Web 应用程序中间层组件中的代表性技术体系，主要用于构建复杂而又灵活的业务流程。在互联网应用中，消息通信被认为是实现系统解耦和高并发的关键技术体系。本节课我们将在 SpringCSS 案例中引入消息通信机制来实现多个服务之间的异步交互。
 

@@ -1,10 +1,18 @@
-# 14-自动创建线程池的缺点？
+---
+title: 自动创建线程池的缺点
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2019-11-04 23:33:00 +0800
+categories: [Java, Concurrent]
+tags: [thread]
+math: true
+mermaid: true
+---
 
 所谓的自动创建线程池就是直接调用 Executors 的各种方法来生成前面学过的常见的线程池，例如 Executors.newCachedThreadPool()。但这样做是有一定风险的。
 
-
-
-### FixedThreadPool
+## FixedThreadPool
 
 看第一种线程池 FixedThreadPool， 它是线程数量固定的线程池，如源码所示，newFixedThreadPool 内部实际还是调用了 ThreadPoolExecutor 构造函数。
 
@@ -19,7 +27,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) { 
 
 
 
-### SingleThreadExecutor
+## SingleThreadExecutor
 
 第二种线程池是 SingleThreadExecutor，分析下创建它的源码。
 
@@ -30,13 +38,9 @@ public static ExecutorService newSingleThreadExecutor() { 
 
 ```
 
-你可以看出，newSingleThreadExecutor 和 newFixedThreadPool 的原理是一样的，只不过把核心线程数和最大线程数都直接设置成了 1，但是任务队列仍是无界的 LinkedBlockingQueue，所以也会导致同样的问题，也就是当任务堆积时，可能会占用大量的内存并导致 OOM。
+可以看出，newSingleThreadExecutor 和 newFixedThreadPool 的原理是一样的，只不过把核心线程数和最大线程数都直接设置成了 1，但是任务队列仍是无界的 LinkedBlockingQueue，所以也会导致同样的问题，也就是当任务堆积时，可能会占用大量的内存并导致 OOM。
 
-
-
-
-
-### CachedThreadPool
+## CachedThreadPool
 
 第三种线程池是 CachedThreadPool，创建它的源码下所示。
 
@@ -53,7 +57,7 @@ public static ExecutorService newCachedThreadPool() { 
 
 
 
-### ScheduledThreadPool 和 SingleThreadScheduledExecutor
+## ScheduledThreadPool 和 SingleThreadScheduledExecutor
 
 第四种线程池 ScheduledThreadPool 和第五种线程池 SingleThreadScheduledExecutor 的原理是一样的，创建 ScheduledThreadPool 的源码如下所示。
 
@@ -83,3 +87,4 @@ public ScheduledThreadPoolExecutor(int corePoolSize) { 
 
 
 > Executors特别好用……是挺好用的，就是不算十分安全。
+> 

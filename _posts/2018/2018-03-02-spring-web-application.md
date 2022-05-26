@@ -1,10 +1,10 @@
 ---
 title: 剖析一个 Spring Web 应用
 author:
-  name: Dinesh Prasanth Moluguwan Krishnamoorthy
+  name: superhsc
   link: https://github.com/happymaya
-date: 2018-03-2 17:32:00 -0500
-categories:  [Blog, Tutorial]
+date: 2018-03-02 17:32:00 +0800
+categories: [Spring]
 tags: [SpringBoot, Spring MVC]
 ---
 

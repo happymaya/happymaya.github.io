@@ -1,17 +1,24 @@
-# 线程池的 4 种拒绝策略
+---
+title: 线程池的 4 种拒绝策略
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2019-11-04 23:33:00 +0800
+categories: [Java, Concurrent]
+tags: [thread]
+math: true
+mermaid: true
+---
 
-
-
-# 拒绝时机
+## 拒绝时机
 
 首先，新建线程池可以指定它的任务拒绝策略，例如：
 
 ```java
-newThreadPoolExecutor(5, 10, 5, TimeUnit.SECONDS, new LinkedBlockingQueue<>(),
-   new ThreadPoolExecutor.DiscardOldestPolicy());
+newThreadPoolExecutor(5, 10, 5, TimeUnit.SECONDS, new LinkedBlockingQueue<>(), new ThreadPoolExecutor.DiscardOldestPolicy());
 ```
 
-以便在必要的时候按照我们的策略来拒绝任务，那么拒绝任务的时机是什么呢？线程池会在以下两种情况下会拒绝新提交的任务。
+以便在必要的时候按照自己的策略来拒绝任务，那么拒绝任务的时机是什么呢？ 线程池会在以下两种情况下会拒绝新提交的任务。
 
 - 第一种情况是：当调用 shutdown 等方法关闭线程池后，即便此时可能线程池内部依然有没执行完的任务正在执行，但是由于线程池已经关闭，此时如果再向线程池内提交任务，就会遭到拒绝。
 
@@ -27,7 +34,7 @@ newThreadPoolExecutor(5, 10, 5, TimeUnit.SECONDS, new LinkedBlockingQueue<>
   2. 然后往队列里去放任务，队列的 10 个容量被放满了之后，会继续创建新线程，直到达到最大线程数 10；
   3. 此时线程池中一共有 20 个任务，其中 10 个任务正在被 10 个线程执行，还有 10 个任务在任务队列中等待，而且由于线程池的最大线程数量就是 10，所以已经不能再增加更多的线程来帮忙处理任务了，这就意味着此时线程池工作饱和，这个时候再提交新任务时就会被拒绝
 
-![由于工作饱和导致的拒绝](D:\coding\image\assert\blog\java\java-thread-rejection-policy-1.png)
+![由于工作饱和导致的拒绝](https://images.happymaya.cn/assert/java/thread/java-thread-rejection-policy-1.png)
 
 如上图：
 
@@ -37,31 +44,29 @@ newThreadPoolExecutor(5, 10, 5, TimeUnit.SECONDS, new LinkedBlockingQueue<>
 
 如何正确地选择拒绝策略呢？Java 在 ThreadPoolExecutor 类中为提供了 4 种默认的拒绝策略来应对不同的场景，都实现了 RejectedExecutionHandler 接口，如图所示：
 
-![Java ThreadPoolExecutor 类中提供的 4 种默认的拒绝策略](D:\coding\image\assert\blog\java\java-thread-rejection-policy-2.png)
+![Java ThreadPoolExecutor 类中提供的 4 种默认的拒绝策略](https://images.happymaya.cn/assert/java/thread/java-thread-rejection-policy-2.png)
 
 
 
 
 
-# 拒绝策略
+## 拒绝策略
 
-第一种拒绝策略是 AbortPolicy
+**第一种拒绝策略是 AbortPolicy**
 
-这种拒绝策略在拒绝任务的时候，会直接抛出一个类型为 `RejecetExecutionException` 的 `RuntimeException` ，从而让我们感知到任务被拒绝了，于是就可以根据业务逻辑选择重试或者放弃提交等策略。
+这种拒绝策略在拒绝任务的时候，会直接抛出一个类型为 `RejecetExecutionException` 的 `RuntimeException` ，从而感知到任务被拒绝了，于是就可以根据业务逻辑选择重试或者放弃提交等策略。
 
-第二种拒绝策略是 DiscardPolicy
+**第二种拒绝策略是 DiscardPolicy**
 
-这种拒绝策略如名字一样，当新任务被提交后直接被丢弃掉，也不会给任何的通知，这相对而言存在一定的风险，因为我们提交的时候根本不知道这个任务会被丢弃，从而有可能造成数据的丢失。
+这种拒绝策略如名字一样，当新任务被提交后直接被丢弃掉，也不会给任何的通知，这相对而言存在一定的风险，因为提交的时候根本不知道这个任务会被丢弃，从而有可能造成数据的丢失。
 
-第三种拒绝策略是 DiscardOldestPolicy。
+**第三种拒绝策略是 DiscardOldestPolicy**
 
 如果线程池没被关闭且没有能力执行，则会丢弃任务队列中的头结点。
 
 通常是存活时间最长的任务，这种策略与第二种不同之处在于它丢弃的不是最新提交的，而是队列中存活时间最长的，这样就可以腾出空间给新提交的任务，但同理它也存在一定的数据丢失风险。
 
-
-
-第四种拒绝策略是 CallerRunsPolicy。
+**第四种拒绝策略是 CallerRunsPolicy**
 
 相对其它拒绝策略，它就比较完善了，当有新任务提交后，如果线程池没被关闭且没有能力执行，则把这个任务交于提交任务线程执行，也就是谁提交任务，谁就负责执行任务（提交任务的线程是不固定的，取决于具体是哪个线程执行 submit 等方法）。这样做主要有两点好处：
 

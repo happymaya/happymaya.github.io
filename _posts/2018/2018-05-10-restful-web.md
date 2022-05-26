@@ -1,4 +1,12 @@
-# 构建一个 RESTful 风格的 Web 服务
+---
+title: 构建 RESTful 风格的 Web 服务
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-05-10 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, RESTful, Web]
+---
 
 ## 创建 RESTful 服务
 

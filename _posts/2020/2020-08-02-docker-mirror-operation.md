@@ -9,7 +9,7 @@ tags: [Docker]
 math: true
 mermaid: true
 image:
-  src: /assets/post-img/docker/docker.jpeg
+  src: https://images.happymaya.cn/assert/docker/docker.jpeg
   width: 800
   height: 500
 ---
@@ -238,7 +238,7 @@ $ tree .
 ```
 
 通过上面的目录结构可以看到，Dockerfile 的每一行命令，都生成了一个镜像层，每一层的 diff 夹下只存放了增量数据，如图 2 所示。
-![镜像文件系统.png](/assets//post-img/docker/docker_image_file_system.png)
+![镜像文件系统.png](https://images.happymaya.cn/assert/docker/docker_image_file_system.png)
 
 分层的结构使得 Docker 镜像非常轻量，每一层根据镜像的内容都有一个唯一的 ID 值，当不同的镜像之间有相同的镜像层时，便可以实现不同的镜像之间共享镜像层的效果。
 总结一下， 

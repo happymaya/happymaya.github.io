@@ -1,4 +1,12 @@
-# Spring Boot 中的配置体系
+---
+title: Spring Boot 中的配置体系
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-04-01 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, Config System]
+---
 
 ## 创建第一个 Spring Boot Web 应用程序
 

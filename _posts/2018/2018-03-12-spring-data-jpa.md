@@ -1,5 +1,12 @@
-# 使用 Spring Data JPA 访问关系型数据库
-
+---
+title: 使用 Spring Data JPA 访问关系型数据库
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-03-12 17:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, Spring Security]
+---
 
 ## 引入 Spring Data JPA
 

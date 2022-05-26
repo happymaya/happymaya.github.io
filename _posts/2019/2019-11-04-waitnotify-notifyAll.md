@@ -5,14 +5,12 @@ author:
   link: https://github.com/happymaya
 date: 2019-11-04 23:33:00 +0800
 categories: [Java, Concurrent]
-tags:  [java, thread]
+tags: [thread]
 math: true
 mermaid: true
 ---
 
-
 从三个问题入手：
-
 1. 为什么 wait 方法必须在 synchronized 保护的同步代码中使用？
 2. 为什么 wait/notify/notifyAll 被定义在 Object 类中，而 sleep 定义在 Thread 类中？
 3. wait/notify 和 sleep 方法的异同？
@@ -63,6 +61,7 @@ wait 方法的源码注释是怎么写的。
         wait(0);
     }
 ```
+
 其中，`wait method should always be used in a loop...This method should only be called by a thread that is the owner of this object's monitor.`的意思是说，在使用 wait 方法时，必须把 wait 方法写在 synchronized 保护的 while 代码块中，并始终判断执行条件是否满足，如果满足就往下继续执行，如果不满足就执行 wait 方法，而在执行 wait 方法之前，必须先持有对象的 monitor 锁，也就是通常所说的 synchronized 锁。那么设计成这样有什么好处呢？
 
 逆向思考这个问题，如果不要求 wait 方法放在 synchronized 保护的同步代码中使用，而是可以随意调用，那么就有可能写出如下的代码：

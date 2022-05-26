@@ -1,4 +1,12 @@
-# 使用 Admin Server 管理 Spring 应用程序
+---
+title: 使用 Admin Server 管理 Spring 应用程序
+author:
+  name: superhsc
+  link: https://github.com/happymaya
+date: 2018-05-22 20:32:00 +0800
+categories: [Spring]
+tags: [SpringBoot, Spring Security]
+---
 
 基于 Actuator 暴露的各种 HTTP 端点，可以获取系统的运行时状态。
 
