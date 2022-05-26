@@ -6,12 +6,12 @@ author:
 date: 2020-08-15 23:33:00 +0800
 categories: [虚拟化技术, Docker 落地笔记]
 tags: [Docker,Kubernetes]
-math: true
-mermaid: true
-image:
-  src: https://images.happymaya.cn/assert/docker/docker.jpeg
-  width: 800
-  height: 500
+# math: true
+# mermaid: true
+# image:
+#   src: https://images.happymaya.cn/assert/docker/docker.jpeg
+#   width: 800
+#   height: 500
 ---
 
 Docker 虽然在容器领域有着不可撼动的地位，然而在容器的编排领域，却有着另外一个事实标准，那就是 Kubernetes。

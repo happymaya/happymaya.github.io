@@ -6,12 +6,12 @@ author:
 date: 2020-08-09 23:33:00 +0800
 categories: [虚拟化技术, Docker 落地笔记]
 tags: [Docker]
-math: true
-mermaid: true
-image:
-  src: https://images.happymaya.cn/assert/docker/docker.jpeg
-  width: 800
-  height: 500
+# math: true
+# mermaid: true
+# image:
+#   src: https://images.happymaya.cn/assert/docker/docker.jpeg
+#   width: 800
+#   height: 500
 ---
 
 生产环境中监控容器的运行状况十分重要，往往通过监控可以随时掌握容器的运行状态，做到线上隐患和问题早发现，早解决。

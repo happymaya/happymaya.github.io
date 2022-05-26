@@ -6,12 +6,12 @@ author:
 date: 2020-08-21 14:33:00 +0800
 categories: [虚拟化技术, Docker 落地笔记]
 tags: [Docker,DevOps,CI/CD]
-math: true
-mermaid: true
-image:
-  src: https://images.happymaya.cn/assert/docker/docker.jpeg
-  width: 800
-  height: 500
+# math: true
+# mermaid: true
+# image:
+#   src: https://images.happymaya.cn/assert/docker/docker.jpeg
+#   width: 800
+#   height: 500
 ---
 
 DevOps 的思想可以缩短上线周期并且提高软件迭代速度，而 CI/CD 则是 DevOps 思想中最重要的部分。

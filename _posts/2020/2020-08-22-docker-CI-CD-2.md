@@ -6,12 +6,12 @@ author:
 date: 2020-08-22 16:33:00 +0800
 categories: [虚拟化技术, Docker 落地笔记]
 tags: [Docker,DevOps,CI/CD]
-math: true
-mermaid: true
-image:
-  src: https://images.happymaya.cn/assert/docker/docker.jpeg
-  width: 800
-  height: 500
+# math: true
+# mermaid: true
+# image:
+#   src: https://images.happymaya.cn/assert/docker/docker.jpeg
+#   width: 800
+#   height: 500
 ---
 
 昨天使用 Docker + Jenkins + GitLab 搭建 CI/CD 环境，今天使用已经构建好的环境来实际构建和部署一个应用。

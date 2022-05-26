@@ -6,12 +6,12 @@ author:
 date: 2020-08-05 23:33:00 +0800
 categories: [虚拟化技术, Docker 落地笔记]
 tags: [Docker]
-math: true
-mermaid: true
-image:
-  src: https://images.happymaya.cn/assert/docker/docker.jpeg
-  width: 800
-  height: 500
+# math: true
+# mermaid: true
+# image:
+#   src: https://images.happymaya.cn/assert/docker/docker.jpeg
+#   width: 800
+#   height: 500
 ---
 # 容器（Container）是什么？
 

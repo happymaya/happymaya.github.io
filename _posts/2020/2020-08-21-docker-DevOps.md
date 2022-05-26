@@ -6,12 +6,12 @@ author:
 date: 2020-08-21 10:33:00 +0800
 categories: [虚拟化技术, Docker 落地笔记]
 tags: [Docker,DevOps]
-math: true
-mermaid: true
-image:
-  src: https://images.happymaya.cn/assert/docker/docker.jpeg
-  width: 800
-  height: 500
+# math: true
+# mermaid: true
+# image:
+#   src: https://images.happymaya.cn/assert/docker/docker.jpeg
+#   width: 800
+#   height: 500
 ---
 
 DevOps 作为一个热门的概念，近几年被提及的频率也越来越高。
